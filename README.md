@@ -21,7 +21,7 @@ This project implements a Distributed Denial of Service (DDoS) attack detection 
 - `templates/result.html`: HTML template to display the accuracy of the detection system and any detected attacks.
 
 #### Dataset:
-- The system uses a dataset stored in `WSNBFSFdataset.csv` for simulating packet streams. This dataset includes packet size information and corresponding labels (normal or attack).
+- The system uses a dataset stored in `WSNBFSFdataset.csv` (Download the dataset from Kaggle, as it is not attached here.) for simulating packet streams. This dataset includes packet size information and corresponding labels (normal or attack).
 
 #### Acknowledgments:
 - This project is inspired by the need for robust DDoS attack detection mechanisms to secure internet servers and networks.
