@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDoS Attack Detection Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .result {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .accuracy {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .alert {
+            background-color: #ffc107;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DDoS Attack Detection Result</h1>
+        <div class="result">
+            <p>Normal Traffic or DDoS Attack:</p>
+            <div class="alert">
+                {% if attack_detected %}
+                    <p>DDoS attack detected! Entropy: {{ entropy_value }}</p>
+                {% else %}
+                    <p>Normal traffic. Entropy: {{ entropy_value }}</p>
+                {% endif %}
+            </div>
+            <p>Accuracy: <span class="accuracy">{{ accuracy }}</span></p>
+        </div>
+    </div>
+</body>
+</html>
